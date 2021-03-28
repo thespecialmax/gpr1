@@ -1,0 +1,988 @@
+/*
+Theme Name: Igretec
+Description: Thème enfant du thème devdmbootstrap3
+Author: Comase info
+Template: devdmbootstrap3
+Version: 3
+*/
+
+
+/* source-sans-pro-regular - latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/source-sans-pro-v13-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'),
+       url('../fonts/source-sans-pro-v13-latin-regular.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/source-sans-pro-v13-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/source-sans-pro-v13-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/source-sans-pro-v13-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/source-sans-pro-v13-latin-regular.svg#SourceSansPro') format('svg'); /* Legacy iOS */
+}
+
+/* open-sans-regular - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/open-sans-v17-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans Regular'), local('OpenSans-Regular'),
+       url('../fonts/open-sans-v17-latin-regular.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/open-sans-v17-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/open-sans-v17-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/open-sans-v17-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/open-sans-v17-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+
+
+body{font-family:'Source Sans Pro', sans-serif; background-color: #E4E4E4; color:#4C4C4E; font-size: 18px}
+a{color:#4c4c4e}
+a:hover, a:focus, a:active{text-decoration: none; font-weight: bold;color:#4c4c4e}
+a:focus{outline: none;}
+.whitePanel{background-color: #FFF; padding-top: 15px; padding-bottom: 50px;}
+
+/*h2{font-family: 'Open Sans', sans-serif; font-size: 23px;}*/
+div.pageContent h1{font-family: 'Open Sans', sans-serif; font-size: 28px; margin-top: 0px; border: none; margin-top:10px; color:#50961e}
+div.pageContent h2{font-size: 20px; font-weight: bold; text-transform: uppercase; font-family: 'Open Sans', sans-serif; margin-top:20px; color:#50961e}
+div.pageContent h3 {font-family: 'Source Sans Pro', sans-serif; font-size: 21px; font-weight: bold; margin-top:20px; }
+div.pageContent h4 {font-family: 'Source Sans Pro', sans-serif; font-size: 18px; font-weight: bold; margin-top:20px; }
+
+h2.page-header > a {color:#50961e}
+
+/*BOOTSTRAP*/
+.well{background:#f7f7fa}
+.form-horizontal .control-label {text-align: left}
+.form-group{margin-bottom: 5px;}
+.form-inline .form-group{vertical-align: inherit;}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{background-color:inherit}
+.widget{margin-bottom: 15px;}
+.panel-heading h4.panel-title{margin-top: 0}
+.navbar-default{ z-index: 1030;}
+.table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td, #wp-calendar > thead > tr > th, #wp-calendar > tbody > tr > th, #wp-calendar > tfoot > tr > th, #wp-calendar > thead > tr > td, #wp-calendar > tbody > tr > td, #wp-calendar > tfoot > tr > td, table > thead > tr > th, table > tbody > tr > th, table > tfoot > tr > th, table > thead > tr > td, table > tbody > tr > td, table > tfoot > tr > td{border-top: none;padding:0}
+
+.form-control:focus, #searchform #s:focus {
+    border-color: #50961e;
+    box-shadow:none;
+    outline: 0 none;
+}
+
+@media (min-width: 768px) {
+    .navbar-default{background-color: inherit; border: none; margin-top: 10px;}
+    .navbar-collapse{padding-left: 0px;}
+}
+
+@media (max-width: 768px) {
+    .navbar-default{ margin-top: 10px;}
+}
+
+/*HEADER*/
+.igretec-home-header{background:#F7F7F9 url('../images/background_home.jpg') ; background-position:  center; background-size: auto; background-repeat: no-repeat}
+
+/*FOOTER*/
+.mailinglist-footer-area{background-color: #CC012E; font-family :'Source Sans Pro', sans-serif; font-size: 28px; color: #FFF; padding-top: 20px; padding-bottom: 20px; text-align: center}
+.mailinglist-footer-area a {color:#FFF;}
+.mailinglist-footer-area .informedText{font-weight: bold; }
+.mailinglist-footer-area .resultText{font-size: 20px;}
+.mailinglist-footer-area input{color:#949495; font-size: 21px; font-style: italic}
+.mailinglist-footer-area .unregister a{font-size: 14px; color:#FFF}
+.logo-footer-area{background-color: #F0F0F0; padding-top: 20px; padding-bottom: 20px; color: #949495; font-size: 15px;}
+.logo-footer-area a{color: #949495;}
+.logo-footer-area p{line-height: 17px;}
+.logo-footer-area p.title{font-weight: bold; margin-top: 20px; text-transform: uppercase; color: #4c4c4e; font-size: 13px;}
+.menu-footer-area{ padding-top: 10px;  font-family :'Source Sans Pro', sans-serif; font-size: 13px; color: #949495}
+.menu-footer-area a {font-size: 13px; color: #949495} 
+.menu-footer-area a:hover {text-decoration: underline;} 
+.menu-footer-area #menu-footer{margin: 0; padding: 0; list-style-type: none;}
+.menu-footer-area #menu-footer li { float: left; }
+.menu-footer-area #menu-footer li + li::before { content: " | "; }
+
+/*WIDGET*/
+.widget  h3 {color: #50961E; font-family:'Open Sans', sans-serif; font-size: 28px; padding-left: 35px;}
+
+/*FT CALENDAR*/
+.ftc_thumb_calendar{ background: #F7F7FA; padding: 10px;}
+.ftc_thumb_calendar > h3{background: url(../images/ico_agenda.png) no-repeat left center; margin-top: 0px;}
+
+.widget_rsswidget > h3{background: url(../images/ico_rss.png) no-repeat left center; margin-top: 0px;}
+.widget_rsswidget a{font-family: 'Open Sans', sans-serif; font-size: 18px;}
+.widget_rsswidget a:hover{text-decoration: none; font-weight: 700}
+.widget_rsswidget > ul{padding-left: 20px;}
+.widget_rsswidget > ul > li {list-style-image: url('../images/ico_bullet_off.png'); margin-bottom: 5px; padding-bottom: 5px; border-bottom: dashed 1px #50961e}
+.widget_rsswidget > ul > li:hover {list-style-image: url('../images/ico_bullet_on.png')}
+
+
+/*NEWS WIDGET*/
+.widget_igretecnewswidget > h3{background: url(../images/ico_news.png) no-repeat left center; margin-top: 0px;}
+.widget_igretecnewswidget{ background: none repeat scroll 0 0 #f7f7fa; padding: 10px;}
+.widget_igretecnewswidget > ul{padding-left: 20px;}
+.widget_igretecnewswidget > ul > li {list-style-image: url('../images/ico_bullet_off.png'); margin-bottom: 10px;}
+.widget_igretecnewswidget > ul > li.separator{list-style: none; border-bottom: dashed 1px #50961e;}
+.widget_igretecnewswidget > ul > li.separator:hover{list-style: none;}
+.widget_igretecnewswidget > ul > li.separator:last-child{display: none}
+.widget_igretecnewswidget > ul > li:hover{list-style-image: url('../images/ico_bullet_on.png')}
+.widget_igretecnewswidget > ul > li > div.date{font-size: 14px;}
+.widget_igretecnewswidget > ul > li > div.title > a {font-size: 18px; color: #50961e; font-weight: 700}
+
+
+
+/*EMPLOI WIDGET*/
+.widget_igretecemploiwidget > h3{background: url(../images/ico_emploi.png) no-repeat left center; margin-top: 0px;}
+.widget_igretecemploiwidget{ background: none repeat scroll 0 0 #f7f7fa; padding: 10px;}
+.widget_igretecemploiwidget > ul{padding-left: 20px;}
+.widget_igretecemploiwidget > ul > li.separator{list-style: none; border-bottom: dashed 1px #50961e;}
+.widget_igretecemploiwidget > ul > li.separator:hover{list-style: none;}
+/*.widget_igretecemploiwidget > ul > li.separator:last-child{display: none}*/
+.widget_igretecemploiwidget > ul > li{list-style: none; margin-bottom: 10px;}
+/*
+.widget_igretecemploiwidget > ul > li {list-style-image: url('../images/ico_bullet_off.png'); margin-bottom: 10px;}
+.widget_igretecemploiwidget > ul > li:hover{list-style-image: url('../images/ico_bullet_on.png')}*/
+.widget_igretecemploiwidget > ul > li > div.title > a {  font-family: 'Open Sans',sans-serif;font-size: 18px;}
+
+.widget_igretecemploiwidget > ul > li {list-style-image: url("../images/ico_bullet_off.png");}
+.widget_igretecemploiwidget > ul > li:hover {list-style-image: url("../images/ico_bullet_on.png");}
+
+.widget_igretecemploiwidget > ul > li > div.excerpt{font-size: 13px;}
+.widget_igretecemploiwidget > ul > li > div.excerpt .icon{float: right}
+.widget_igretecemploiwidget > ul > li > div.excerpt a.readMore{display: none;}
+
+/*PUBLICATION WIDGET*/
+.widget_igretec_publication_widget > h3{background: url(../images/ico_publication.png) no-repeat left center; margin-top: 0px;}
+.widget_igretec_publication_widget .description{font-weight: bold;}
+
+/*Widget Search Immo*/
+.widget_igretecseachimmowidget > h3{background: url(../images/ico_immo.png) no-repeat left center; margin-top: 0px;}
+.widget_igretecseachimmowidget{ background: none repeat scroll 0 0 #f7f7fa; padding: 10px;}
+
+.whitePanel #ftcalendar-div{background-color: inherit; border:none}
+.whitePanel .thumb #ftcalendar-nav{text-align: center; padding: 6px; height: 30px; border-bottom: 1px solid #000; margin: 5px;}
+.whitePanel .thumb #ftcalendar-nav #ftcalendar-current{text-transform: uppercase; font-size: 15px;}
+
+.whitePanel .thumb #ftcalendar-table tr th{background: none; border: none; padding: 10px; }
+.whitePanel .thumb #ftcalendar-table tr td{ padding: 0px; height: 30px; }
+.whitePanel .thumb #ftcalendar-table{width: 95%; margin-bottom: 10px;}
+.whitePanel .thumb #ftcalendar-nav #ftcalendar-prev{float: left; background: url("../images/calendar_previous.png");}
+.whitePanel .thumb #ftcalendar-nav #ftcalendar-next{float: right; background: url("../images/calendar_next.png");}
+.whitePanel .thumb #ftcalendar-nav #ftcalendar-next > a{opacity: 0}
+.whitePanel .thumb #ftcalendar-nav #ftcalendar-prev > a{opacity: 0}
+.whitePanel .thumb .ftcalendar-event-date span.thumb-event { background-color: #848484; color: #FFFFFF; font-weight: bold; height: 30px; padding-top: 8px; text-decoration: none;}
+.whitePanel .thumb #ftcalendar-table tr td.current_day {font-weight: bolder; text-decoration: underline; background-color: inherit;}
+.whitePanel .thumb-event-div{border: solid 1px #50961e }
+.whitePanel .thumb-event-header{color:#FFF; background-color: #50961e; padding: 3px;}
+.whitePanel .thumb-event-header .thumb-event-close{color: #FFF;}
+
+
+/*TOP RIGHT SIDEBAR*/
+#topRightSidebar {padding: 5px; margin-top:25px}
+
+/*BOTTOM RIGHT SIDEBAR*/
+#bottomRightSidebar .widget{background:none repeat scroll 0 0 #f7f7fa; padding : 10px; }
+
+/*LIENS UTILES SIDEBAR*/
+#liensUtilesSidebar{margin-bottom: 30px;}
+
+/*ENTREPRISE | ACTEUR PUBLIC | CITOYEN |IGRETEC | EMPLOI | PUBLICATION*/
+
+div.publication a:hover,div.igretec a:hover, div.citoyen a:hover, div.entreprise a:hover, div.acteur-public a:hover,div.gouvernance a:hover,
+.widget_igretechomemenuwidget .menu li.current-menu-item > a, .widget_igretechomemenuwidget .menu li.current-menu-parent > a 
+{text-decoration: none; font-weight: bold;}
+
+div.region  > div.titre,div.igretec_b > div.titre,div.energie > div.titre,div.gouvernance > div.titre,div.publication > div.titre, div.emploi > div.titre,div.igretec > div.titre, div.citoyen > div.titre, div.entreprise > div.titre, div.acteur-public > div.titre, div.actualites-partenaires  > div.titre{font-family: 'Open Sans', sans-serif; font-weight: bold; /*line-height: 50px;*/ font-size: 22px; margin-top: 10px;}
+div.region > div.ssTitre,div.igretec_b > div.ssTitre, div.energie > div.ssTitre,div.gouvernance > div.ssTitre, div.publication > div.ssTitre, div.emploi > div.ssTitre, div.igretec > div.ssTitre, div.citoyen > div.ssTitre, div.entreprise > div.ssTitre, div.acteur-public > div.ssTitre{font-family: 'Source Sans Pro', sans-serif; font-style: italic; font-size: 18px; font-weight: bold; margin-bottom: 10px;}
+div.region> div.menu ul,div.energie > div.menu ul,div.gouvernance > div.menu ul,div.igretec_b > div.menu ul,div.publication > div.menu ul, div.emploi > div.menu ul, div.igretec > div.menu ul, div.citoyen > div.menu ul, div.entreprise > div.menu ul, div.acteur-public > div.menu ul {padding-left: 20px;}
+
+.widget_igretechomemenuwidget div.entreprise , .widget_igretechomemenuwidget div.entreprise a, div.entreprise h1, div.entreprise h2, div.entreprise .pageContent a,
+div.category-entreprise-news h1, div.category-entreprise-news h2, div.category-entreprise-news a {color:  #a33088}
+
+div.entreprise > div.picto {background: url("../images/ico_entreprise_gd.png") no-repeat left; height: 80px; width: 80px;}
+div.entreprise > div.menu ul > li {list-style-image: url('../images/menu_entreprise_off.png'); margin-bottom: 5px;}
+
+div.entreprise > div.menu ul > li:hover,div.entreprise > div.menu li.current-menu-item, div.entreprise > div.menu li.current-menu-parent{list-style-image: url('../images/menu_entreprise_on.png')}
+div.entreprise > div.menu ul > li > ul.sub-menu > li{list-style-image: url('../images/menu_entreprise_niv2.png');}
+.widget_igretechomemenuwidget > div.entreprise {border-bottom: dashed #a33088 2px;}
+
+.widget_igretechomemenuwidget div.acteur-public, .widget_igretechomemenuwidget div.acteur-public a, div.acteur-public h1, div.acteur-public h2, div.acteur-public .pageContent a,
+div.category-acteurpublic-news h1, div.category-acteurpublic-news h2, div.category-acteurpublic-news a{color:  #e2690e}
+div.acteur-public > div.picto {background: url("../images/ico_public_gd.png") no-repeat left; height: 80px; width: 80px;}
+div.acteur-public > div.menu ul > li {list-style-image: url('../images/menu_public_off.png'); margin-bottom: 5px;}
+div.acteur-public > div.menu ul > li:hover, div.acteur-public > div.menu li.current-menu-item, div.acteur-public > div.menu li.current-menu-parent {list-style-image: url('../images/menu_public_on.png')}
+.widget_igretechomemenuwidget > div.acteur-public {border-bottom: dashed #e2690e 2px;}
+div.acteur-public > div.menu ul > li > ul.sub-menu > li {list-style-image: url('../images/menu_public_niv2.png')}
+
+.widget_igretechomemenuwidget div.citoyen, .widget_igretechomemenuwidget div.citoyen a, div.citoyen h1, div.citoyen h2, div.citoyen .pageContent a,
+div.category-citoyen-news h1, div.category-citoyen-news h2, div.category-citoyen-news a{color:  #009975}
+div.citoyen > div.picto {background: url("../images/ico_citoyen_gd.png") no-repeat left; height: 80px; width: 80px;}
+div.citoyen > div.menu ul > li {list-style-image: url('../images/menu_citoyen_off.png'); margin-bottom: 5px;}
+div.citoyen > div.menu ul > li:hover, div.citoyen > div.menu li.current-menu-item, div.citoyen > div.menu li.current-menu-parent {list-style-image: url('../images/menu_citoyen_on.png')}
+.widget_igretechomemenuwidget > div.citoyen {border-bottom: dashed #009975 2px;}
+div.citoyen > div.menu ul > li > ul.sub-menu > li {list-style-image: url('../images/menu_citoyen_niv2.png')}
+
+.widget_igretechomemenuwidget div.igretec, .widget_igretechomemenuwidget div.igretec a, div.igretec h1, div.igretec h2, div.igretec .pageContent a ,
+div.category-igretec-news h1, div.category-igretec-news h2, div.category-igretec-news a{color:  #CC012D}
+.widget_igretechomemenuwidget  div.igretec > div.picto {background: url("../images/ico_igretec_home.png") no-repeat left; height: 80px; width: 80px;}
+div.igretec > div.menu ul > li {list-style-image: url('../images/menu_igretec_off.png'); margin-bottom: 5px;}
+div.igretec > div.menu ul > li:hover, div.igretec > div.menu li.current-menu-item, div.igretec > div.menu li.current-menu-parent {list-style-image: url('../images/menu_igretec_on.png')}
+.widget_igretechomemenuwidget > div.igretec {border-bottom: dashed #CC012D 2px;}
+div.igretec > div.menu ul > li > ul.sub-menu > li {list-style-image: url('../images/menu_igretec_niv2.png')}
+
+
+.widget_igretechomemenuwidget div.gouvernance, .widget_igretechomemenuwidget div.gouvernance a, div.gouvernance h1, div.gouvernance h2, div.gouvernance .pageContent a{color:  #3c5a98}
+div.gouvernance > div.picto {background: url("../images/ico_actu_home.png") no-repeat left; height: 80px; width: 80px;}
+div.gouvernance > div.menu ul > li {list-style-image: url('../images/bullet_bleu.png'); margin-bottom: 5px;}
+div.gouvernance > div.menu ul > li:hover, div.gouvernance > div.menu li.current-menu-item, div.gouvernance > div.menu li.current-menu-parent {list-style-image: url('../images/bullet_bleu_on.png')}
+.widget_igretechomemenuwidget > div.gouvernance {border-bottom: dashed #3c5a98 2px;}
+div.gouvernance > div.menu ul > li > ul.sub-menu > li {list-style-image: url('../images/menu_actu_niv2.png')}
+
+
+.widget_igretechomemenuwidget div.igretec_b, .widget_igretechomemenuwidget div.igretec_b a, div.igretec_b h1, div.igretec_b h2, div.igretec_b .pageContent a{color:  #CC012D}
+.widget_igretechomemenuwidget  div.igretec_b > div.picto {background: url("../images/ico_igretec_home80.png") no-repeat left; height: 80px; width: 80px;}
+div.igretec_b > div.menu ul > li {list-style-image: url('../images/menu_igretec_off.png'); margin-bottom: 5px;}
+div.igretec_b > div.menu ul > li:hover, div.igretec_b > div.menu li.current-menu-item, div.igretec_b > div.menu li.current-menu-parent {list-style-image: url('../images/menu_igretec_on.png')}
+.widget_igretechomemenuwidget > div.igretec_b {border-bottom: dashed #CC012D 2px;}
+div.igretec_b > div.menu ul > li > ul.sub-menu > li {list-style-image: url('../images/menu_igretec_niv2.png')}
+
+
+.widget_igretechomemenuwidget div.region, .widget_igretechomemenuwidget div.region a, div.region h1, div.region h2, div.region .pageContent a{color:  #3c5a98}
+.widget_igretechomemenuwidget  div.region > div.picto {background: url("../images/ico_igretec_region80.png") no-repeat left; height: 80px; width: 80px;}
+div.region > div.menu ul > li {list-style-image: url('../images/bullet_bleu.png'); margin-bottom: 5px;}
+div.region > div.menu ul > li:hover, div.region > div.menu li.current-menu-item, div.region > div.menu li.current-menu-parent {list-style-image: url('../images/bullet_bleu_on.png')}
+.widget_igretechomemenuwidget > div.region {border-bottom: dashed #3c5a98 2px;}
+div.region > div.menu ul > li > ul.sub-menu > li {list-style-image: url('../images/menu_igretec_niv2.png')}
+
+
+
+div.emploi > div.menu ul > li {list-style-image: url('../images/menu_gris_off.png'); margin-bottom: 5px;}
+div.emploi > div.menu ul > li:hover, div.emploi > div.menu li.current-menu-item, div.emploi > div.menu li.current-menu-parent {list-style-image: url('../images/menu_gris_on.png')}
+.widget_igretechomemenuwidget > div.emploi {border-bottom: dashed #50961e 2px;}
+.widget_igretechomemenuwidget div.emploi div.titre{color:#50961e}
+div.emploi > div.menu ul > li > ul.sub-menu > li {list-style-image: url('../images/menu_gris_niv2.png')}
+
+
+.widget_igretechomemenuwidget div.publication, .widget_igretechomemenuwidget div.publication a, div.publication h1, div.publication h2, div.publication .pageContent a{color:  #E72C79}
+.widget_igretechomemenuwidget div.actualites-partenaires, .widget_igretechomemenuwidget div.actualites-partenaires a, div.actualites-partenaires h1, div.actualites-partenaires h2, div.actualites-partenaires .pageContent a{color:  #3c5a98}
+.widget_igretechomemenuwidget  div.publication > div.picto {background: url("../images/ico_publication_home.png") no-repeat left; height: 80px; width: 80px;}
+div.publication > div.menu ul > li {list-style-image: url('../images/menu_publication_off.png'); margin-bottom: 5px;}
+div.publication > div.menu ul > li:hover, div.publication > div.menu li.current-menu-item, div.publication > div.menu li.current-menu-parent {list-style-image: url('../images/menu_publication_on.png')}
+.widget_igretechomemenuwidget > div.publication {border-bottom: dashed #E72C79 2px;}
+div.publication > div.menu ul > li > ul.sub-menu > li {list-style-image: url('../images/menu_publication_niv2.png')}
+
+.widget_igretechomemenuwidget div.energie, .widget_igretechomemenuwidget div.energie a, div.energie h1, div.energie h2, div.energie .pageContent a{color:  #E72C79}
+.widget_igretechomemenuwidget  div.energie > div.picto {background: url("../images/ico_igretec_energie80.png") no-repeat left; height: 80px; width: 80px;}
+div.energie > div.menu ul > li {list-style-image: url('../images/menu_publication_off.png'); margin-bottom: 5px;}
+div.energie > div.menu ul > li:hover, div.energie > div.menu li.current-menu-item, div.energie > div.menu li.current-menu-parent {list-style-image: url('../images/menu_publication_on.png')}
+.widget_igretechomemenuwidget > div.energie {border-bottom: dashed #E72C79 2px;}
+div.energie > div.menu ul > li > ul.sub-menu > li {list-style-image: url('../images/menu_publication_niv2.png')}
+
+
+
+
+.widget_igretechomemenuwidget div.menu ul > li.menu-item-has-children > ul.sub-menu{display: none;}
+/*.widget_igretechomemenuwidget div.menu ul > li.menu-item-has-children:hover > ul.sub-menu,*/ .widget_igretechomemenuwidget div.menu ul > li.current-menu-parent > ul.sub-menu, .widget_igretechomemenuwidget div.menu ul > li.current-menu-item > ul.sub-menu{display: block;}
+
+/*PAGE INTERIEURE*/
+.pageBandeau {height: 340px; background: url('../images/photo_bandeau.jpg') #FFF;  background-position:  center; background-size: auto; background-repeat: no-repeat}
+.entreprise .pageBandeau {background: url('../images/photo_bandeau_entreprise.jpg') #FFF;  background-position:  center; background-size: auto; background-repeat: no-repeat}
+.citoyen .pageBandeau {background: url('../images/photo_bandeau_citoyen.jpg') #FFF;  background-position:  center; background-size: auto; background-repeat: no-repeat}
+.igretec .pageBandeau {background: url('../images/photo_bandeau_igretec.jpg') #FFF;  background-position:  center; background-size: auto; background-repeat: no-repeat}
+.acteur-public .pageBandeau {background: url('../images/photo_bandeau_acteur-public.jpg') #FFF;  background-position:  center; background-size: auto; background-repeat: no-repeat}
+.publication .pageBandeau {background: url('../images/photo_bandeau_publication.jpg') #FFF;  background-position:  center; background-size: auto; background-repeat: no-repeat}
+.actualites-partenaires .pageBandeau {background: url('../images/photo_bandeau_partenaire.jpg') #FFF;  background-position:  center; background-size: auto; background-repeat: no-repeat}
+.gouvernance .pageBandeau {background: url('../images/photo_bandeau_gouvernance.jpg') #FFF;  background-position:  center; background-size: auto; background-repeat: no-repeat}
+
+
+.pageBandeau .headerContent,.pageCustomBandeau .headerContent  { padding-top: 25px; padding-bottom: 25px; background-color: #FFF; /*opacity: 0.9;*/}
+
+@media (min-width: 768px) {
+	.pageBandeau .headerContent, .pageCustomBandeau .headerContent { opacity: 0.9;}
+	
+}
+
+
+/*MAIN MENU*/
+/*#menu-main{display: table; width: 100%;}
+#menu-main > li { display: inline-table; width: 30%;}*/
+#menu-main > li{padding-left: 30px; margin-left: 20px;}
+#menu-main > li a {font-size: 22px; font-weight: bold; color:#4c4c4e; padding-right:0px;}
+
+
+@media (max-width: 768px) {
+    #menu-main > li{margin-bottom: 10px;}
+}
+
+#menu-main > li.entreprise{ background: url('../images/ico_entreprise_pt_gris.png') no-repeat left center; }
+#menu-main > li.entreprise:hover, #menu-main > li.entreprise.active, #menu-main > li.entreprise.current-page-ancestor, #menu-main > li.entreprise.open{ background: url('../images/ico_entreprise_pt.png') no-repeat left center; }
+#menu-main > li.entreprise > a:hover,  #menu-main > li.entreprise.active > a, #menu-main > li.entreprise.current-page-ancestor > a {color:#a33088}
+
+
+#menu-main > li.gouvernance{ background: url('../images/ico_gouvernance_pt_gris.png') no-repeat left center; }
+#menu-main > li.gouvernance:hover, #menu-main > li.gouvernance.active, #menu-main > li.gouvernance.current_page_ancestor, #menu-main > li.gouvernance.open{ background: url('../images/ico_gouvernance_pt.png') no-repeat left center; }
+#menu-main > li.gouvernance > a:hover,  #menu-main > li.gouvernance.active > a, #menu-main > li.gouvernance.current_page_ancestor > a {color:#3c5a98}
+
+
+#menu-main > li.igretec{ background: url('../images/ico_igretec_pt_gris.png') no-repeat left center; }
+#menu-main > li.igretec:hover, #menu-main > li.igretec.active, #menu-main > li.igretec.current-page-ancestor, #menu-main > li.igretec.open{ background: url('../images/ico_igretec_pt.png') no-repeat left center; }
+#menu-main > li.igretec > a:hover, #menu-main > li.igretec.active > a, #menu-main > li.igretec.current-page-ancestor > a{color:#CC012D}
+
+#menu-main > li.igretec_b{ background: url('../images/ico_igretec_pt_gris.png') no-repeat left center; }
+#menu-main > li.igretec_b:hover, #menu-main > li.igretec_b.active, #menu-main > li.igretec_b.current-page-ancestor, #menu-main > li.igretec_b.open{ background: url('../images/ico_igretec_home40.png') no-repeat left center; }
+#menu-main > li.igretec_b > a:hover, #menu-main > li.igretec_b.active > a, #menu-main > li.igretec_b.current-page-ancestor > a{color:#CC012D}
+
+#menu-main > li.energie{ background: url('../images/ico_igretec_energie_pt_gris.png') no-repeat left center; }
+#menu-main > li.energie:hover, #menu-main > li.energie.active, #menu-main > li.energie.current-page-ancestor, #menu-main > li.energie.open{ background: url('../images/ico_igretec_energie40.png') no-repeat left center; }
+#menu-main > li.energie > a:hover, #menu-main > li.energie.active > a, #menu-main > li.energie.current-page-ancestor > a{color:#e72c79}
+
+
+#menu-main > li.acteur-public{ background: url('../images/ico_public_pt_gris.png') no-repeat left center;}
+#menu-main > li.acteur-public:hover, #menu-main > li.acteur-public.active, #menu-main > li.acteur-public.current-page-ancestor, #menu-main > li.acteur-public.open{ background: url('../images/ico_public_pt.png') no-repeat left center;}
+#menu-main > li.acteur-public > a:hover, #menu-main > li.acteur-public.active > a, #menu-main > li.acteur-public.current-page-ancestor > a{color:#e2690e}
+
+#menu-main > li.citoyen{ background: url('../images/ico_citoyen_pt_gris.png') no-repeat left center;}
+#menu-main > li.citoyen:hover, #menu-main > li.citoyen.active, #menu-main > li.citoyen.current-page-ancestor, #menu-main > li.citoyen.open{ background: url('../images/ico_citoyen_pt.png') no-repeat left center;}
+#menu-main > li.citoyen > a:hover, #menu-main > li.citoyen.active > a, #menu-main > li.citoyen.current-page-ancestor > a{color:#009975}
+
+#menu-main > li.region{ background: url('../images/ico_igretec_region_pt_gris.png') no-repeat left center; }
+#menu-main > li.region:hover, #menu-main > li.region.active, #menu-main > li.region.current-page-ancestor, #menu-main > li.region.open{ background: url('../images/ico_igretec_region40.png') no-repeat left center; }
+#menu-main > li.region > a:hover,  #menu-main > li.region.active > a, #menu-main > li.region.current-page-ancestor > a {color:#3c5a98}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{background-color:inherit}
+
+#menu-main > li.open a, #menu-main > li.open > a:hover, #menu-main > li.open > a{background: none;}
+#menu-main > li.entreprise.open, #menu-main > li.entreprise.open a, #menu-main > li.entreprise.open > a:hover, #menu-main > li.entreprise.open > a{color:#a33088;}
+#menu-main > li.gouvernance.open, #menu-main > li.gouvernance.open a, #menu-main > li.gouvernance.open > a:hover, #menu-main > li.gouvernance.open > a{color:#3c5a98;}
+#menu-main > li.acteur-public.open, #menu-main > li.acteur-public.open a, #menu-main > li.acteur-public.open > a:hover, #menu-main > li.acteur-public.open > a{color:#e2690e;}
+#menu-main > li.citoyen.open, #menu-main > li.citoyen.open a, #menu-main > li.citoyen.open > a:hover, #menu-main > li.citoyen.open > a{color:#009975;}
+#menu-main > li.igretec.open, #menu-main > li.igretec.open a, #menu-main > li.igretec.open > a:hover, #menu-main > li.igretec.open > a{color:#cc012d;}
+#menu-main > li.igretec_b.open, #menu-main > li.igretec_b.open a, #menu-main > li.igretec_b.open > a:hover, #menu-main > li.igretec_b.open > a{color:#cc012d;}
+#menu-main > li.energie.open, #menu-main > li.energie.open a, #menu-main > li.energie.open > a:hover, #menu-main > li.energie.open > a{color:#e72c79;}
+#menu-main > li.region.open, #menu-main > li.region.open a, #menu-main > li.region.open > a:hover, #menu-main > li.region.open > a{color:#3c5a98;}
+ul.dropdown-menu {margin-left: 30px;}
+
+
+
+#menu-main ul.dropdown-menu > li > a {font-size:16px;  padding-right:15px;}
+#menu-main > li.entreprise  ul.dropdown-menu > li > a:hover, #menu-main > li.entreprise  ul.dropdown-menu > li.current-menu-item > a, #menu-main > li.entreprise  ul.dropdown-menu > li.current-page-ancestor > a{background-color: #a33088; color:#FFF;}
+#menu-main > li.gouvernance  ul.dropdown-menu > li > a:hover, #menu-main > li.gouvernance  ul.dropdown-menu > li.current-menu-item > a, #menu-main > li.gouvernance  ul.dropdown-menu > li.current-page-ancestor > a{background-color: #3c5a98; color:#FFF;}
+#menu-main > li.citoyen  ul.dropdown-menu > li > a:hover, #menu-main > li.citoyen  ul.dropdown-menu > li.current-menu-item > a, #menu-main > li.citoyen  ul.dropdown-menu > li.current-page-ancestor > a {background-color: #009975; color:#FFF;}
+#menu-main > li.igretec  ul.dropdown-menu > li > a:hover, #menu-main > li.igretec  ul.dropdown-menu > li.current-menu-item > a, #menu-main > li.igretec  ul.dropdown-menu > li.current-page-ancestor > a,
+#menu-main > li.igretec_b  ul.dropdown-menu > li > a:hover, #menu-main > li.igretec_b  ul.dropdown-menu > li.current-menu-item > a, #menu-main > li.igretec_b  ul.dropdown-menu > li.current-page-ancestor > a{background-color: #cc012d; color:#FFF;}
+#menu-main > li.acteur-public  ul.dropdown-menu > li > a:hover, #menu-main > li.acteur-public  ul.dropdown-menu > li.current-menu-item > a, #menu-main > li.acteur-public  ul.dropdown-menu > li.current-page-ancestor > a {background-color: #e2690e; color:#FFF;}
+#menu-main > li.energie  ul.dropdown-menu > li > a:hover, #menu-main > li.energie  ul.dropdown-menu > li.current-menu-item > a, #menu-main > li.energie  ul.dropdown-menu > li.current-page-ancestor > a{background-color: #e72c79; color:#FFF;}
+#menu-main > li.region  ul.dropdown-menu > li > a:hover, #menu-main > li.region  ul.dropdown-menu > li.current-menu-item > a, #menu-main > li.region  ul.dropdown-menu > li.current-page-ancestor > a{background-color: #3c5a98; color:#FFF;}
+
+/*PAGE SIDEBAR*/
+@media (min-width: 768px) {
+#pageLeftSidebar{ margin-top:-50px;}
+}
+
+/*ACTUALITES PARTENAIRE*/
+
+.widget_igretecactuspartenaireswidget div.actualites-partenaires > div.picto {background: url("../images/ico_actu_home.png") no-repeat left; height: 80px; width: 80px;}
+.widget_igretecactuspartenaireswidget div.actualites-partenaires div.titre, .widget_igretecactuspartenaireswidget div.actualites-partenaires div.titreActu > a,
+div.actualites-partenaires h1, div.actualites-partenaires h2, div.actualites-partenaires .pageContent a,
+div.category-actualites-partenaires h1, div.category-actualites-partenaires h2, div.category-actualites-partenaires a{color:#3C5A98;}
+
+.widget_igretecactuspartenaireswidget div.actualites-partenaires div.titreActu{ font-size: 20px;}
+.widget_igretecactuspartenaireswidget div.actualites-partenaires div.titreActu:hover{font-weight: bold}
+.widget_igretecactuspartenaireswidget div.actualites-partenaires > div.titre{font-family: 'Open Sans', sans-serif; font-weight: bold; font-size: 22px; margin-top: 13px;}
+.widget_igretecactuspartenaireswidget div.actualites-partenaires{border-bottom: dashed 2px #3C5A98; }
+.widget_igretecactuspartenaireswidget div.actualites-partenaires div.date{font-size: 14px; font-weight: bold}
+.widget_igretecactuspartenaireswidget div.actualites-partenaires div.partenaire{font-size: 16px; color:#3C5A98;}
+.widget_igretecactuspartenaireswidget div.actualites-partenaires div.actualites div.actualite {border-bottom: dashed 1px #3C5A98; padding-bottom: 10px; margin-bottom: 10px;}
+.widget_igretecactuspartenaireswidget div.actualites-partenaires div.actualites > ul {padding: 0}
+.widget_igretecactuspartenaireswidget div.actualites-partenaires div.actualites > ul > li {list-style: none;}
+
+
+/*NOS VIDEOS*/
+.widget_igretecvideowidget > div > h3 {background: url("../images/ico_tv_vert.png") no-repeat left center; font-weight: bold; font-size: 22px;}
+.widget_igretecvideowidget > div > div.picto > a > img {width: 100%; border: solid 5px #4C4C4E; height: 220px;}
+.widget_igretecvideowidget > div.igretec > h3 {background: url("../images/ico_tv_rouge.png") no-repeat left center}
+.widget_igretecvideowidget > div.igretec > h3 {color:#cc012d}
+
+
+.widget_igretecvideowidget div.title ul{padding-left: 20px}
+.widget_igretecvideowidget div.title ul > li{list-style-image: url('../images/ico_bullet_off.png');}
+.widget_igretecvideowidget div.title ul > li:hover{list-style-image: url('../images/ico_bullet_on.png');}
+
+.widget_igretecvideowidget > div.igretec div.title ul > li{list-style-image: url('../images/menu_igretec_off.png');}
+.widget_igretecvideowidget > div.igretec div.title ul > li:hover{list-style-image: url('../images/menu_igretec_on.png');}
+
+.widget_igretecvideowidget div.title  a{color:#4c4c4e; font-size: 18px; }
+.widget_igretecvideowidget div.title  a:hover{font-weight: 700}
+
+/*Carousel*/
+/*SLIDER*/
+#igretecCarousel{margin-top: 15px; margin-bottom: 15px;}
+#igretecCarousel .item > a img {width: 100%; height: 250px;}
+.carousel-inner {height: 350px;}
+/*#igretecCarousel .carousel-indicators { bottom: 0; left :0; right: 0; margin-left: 0px; padding-left: 0; width: 100%; } */
+#igretecCarousel .carousel-indicators {
+    position: relative;
+    bottom: -10px;
+    left: 0px;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+#igretecCarousel .carousel-caption .extrait a{color:#FFF;}
+#igretecCarousel .carousel-caption .extrait a:hover{font-weight: normal}
+
+#igretecCarousel .carousel-indicators li { border: medium none; border-radius: 0; height: 44px; margin-bottom: 5px; margin-left: 0; margin-right: 5px !important; margin-top: 0; width: 100px;}
+#igretecCarousel .carousel-indicators img { border: 3px solid #FFFFFF; float: left; height: 44px; left: 0; width: 100px; } 
+#igretecCarousel .carousel-indicators .active img { border: 2px solid #CC012D;}
+#igretecCarousel .carousel-caption { background-color: #151515; bottom: 0; color: #3c3c3b; height: 30%; left: 0; opacity: 0.7; overflow: hidden; padding: 10px 10px 0; text-align: left; text-shadow: none; width: 100%; z-index: 9999; position:relative}
+#igretecCarousel .carousel-caption p{color: #FFF; font-size: 17px;}
+#igretecCarousel .carousel-caption p.date{font-size: 15px; font-style: italic; color: #FFF; font-size: 15px; margin-top: 5px;}
+#igretecCarousel .carousel-caption h3 a, #igretecCarousel .carousel-caption h3 {color:#FFF; font-size: 21px; margin-bottom: 5px; margin-top: 5px; font-weight: bold}
+
+
+/*COMMENT FORM*/
+.form-submit {display: none;}
+.comment-form-author,    .comment-form-email,    .comment-form-url {    width: 50%;    }
+.comment-notes{font-size: 17px;}
+.commentlist  > li  {border-bottom: solid 2px #e3e3e3;}
+.commentlist  > li:last-child {border-bottom : none}
+.comment-reply-link{background-color: #ffffff; border-color: #cccccc; color: #333333;}
+.comment-reply-link:hover, .comment-reply-link:focus, .comment-reply-link:active { background-color: #e6e6e6; border-color: #adadad; color: #333333;}
+.igretec-comments{margin-top: 40px;}
+.igretec-comments h4{border-bottom:solid 1px #e3e3e3; padding-bottom: 10px; }
+.commentmetadata{font-size: 14px;}
+
+p.publicationDate{font-size: 14px; font-style: italic; margin-bottom: 0}
+a.readMore{margin-left: 10px}
+
+/*PAGENAVI*/
+.pagination-centered{text-align: center;}
+.pagination > li > span{color:#4c4c4e}
+.pagination > li > a, .pagination > li > span{color:#4c4c4e}
+.pagination > li > a:hover{font-weight: bold;}
+.pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus, .pagination > li > span.current {
+    background-color: #eeeeee;
+    border-color: #dddddd;
+    color: #4c4c4e;    
+}
+
+
+
+h2.page-header > span.picto{float: right}
+div.category-igretec-news h2.page-header > span.picto{background: url('../images/ico_igretec_small.png') no-repeat;height: 30px;width: 30px;}
+div.category-entreprise-news h2.page-header > span.picto{background: url('../images/ico_entreprise_small.png') no-repeat;height: 30px;width: 30px;}
+div.category-citoyen-news h2.page-header > span.picto{background: url('../images/ico_citoyen_small.png') no-repeat;height: 30px;width: 30px;}
+div.category-acteurpublic-news h2.page-header > span.picto{background: url('../images/ico_public_small.png') no-repeat;height: 30px;width: 30px;}
+
+
+#blogLeftSidebar .widget_igreteccategoriemenuwidget{margin-bottom: 50px;}
+#blogLeftSidebar .widget_igreteccategoriemenuwidget > div.actualites-partenaires{margin-top: -50px; border-bottom: 2px dashed #3c5a98; padding-bottom:15px;}
+#blogLeftSidebar .widget_igreteccategoriemenuwidget > div.actualites-partenaires > div.title > a{ font-family: 'Open Sans', sans-serif; font-size: 22px; font-weight: bold; margin-top: 10px; color:#3c5a98;}
+#blogLeftSidebar .widget_igreteccategoriemenuwidget > div.actualites-partenaires > div.picto{ background: url("../images/ico_actu_home.png") no-repeat scroll left center rgba(0, 0, 0, 0); height:80px; width:80px;}
+#blogLeftSidebar .widget_igreteccategoriemenuwidget > div.actualites-partenaires  ul >li> a {color:#3c5a98;}
+#blogLeftSidebar .widget_igreteccategoriemenuwidget > div.actualites-partenaires  ul >li{list-style-image: url('../images/menu_actu_off.png')}
+#blogLeftSidebar .widget_igreteccategoriemenuwidget > div.actualites-partenaires  ul >li:hover, #blogLeftSidebar .widget_igreteccategoriemenuwidget > div.actualites-partenaires  ul >li.current-cat{list-style-image: url('../images/menu_actu_on.png')}
+
+
+#blogLeftSidebar .widget_igreteccategoriemenuwidget > div  ul >li.current-cat > a {font-weight: bold}
+#blogLeftSidebar .widget_igreteccategoriemenuwidget > div{border-bottom: 2px dashed #50961e}
+#blogLeftSidebar .widget_igreteccategoriemenuwidget > div  ul{padding-left: 20px}
+#blogLeftSidebar .widget_igreteccategoriemenuwidget > div > div.title > a{ font-family: 'Open Sans', sans-serif; font-size: 22px; font-weight: bold; margin-top: 10px; color:#50961e}
+#blogLeftSidebar .widget_igreteccategoriemenuwidget > div  ul >li{list-style-image: url('../images/menu_gris_off.png')}
+#blogLeftSidebar .widget_igreteccategoriemenuwidget > div  ul >li:hover, #blogLeftSidebar .widget_igreteccategoriemenuwidget > div  ul >li.current-cat{list-style-image: url('../images/menu_gris_on.png')}
+
+
+/*SHARE BUTTONS*/
+.shareButtons{text-align: right; margin-top: 10px; margin-bottom: 0px; float: right}
+.shareButtons > ul > li{list-style: none; display: inline-block; margin-left: 15px; }
+.shareButtons > ul > li.text{color:#B2B3B7; border: solid 1px #B2B3B7; height: 30px; padding-left: 20px; padding-right: 20px;}
+
+/*RESEAUX SOCIAUX*/
+ #sidebar-rs .reseaux-sociaux > span.message {float: left; font-family: 'Open Sans', sans-serif; font-style: italic; font-size: 20px; margin:0px 10px 0 0; color: #B2B3B5; padding :0 }
+ #sidebar-rs .reseaux-sociaux > div.links {text-align: right}
+ #sidebar-rs .reseaux-sociaux{margin-bottom:  0px; margin-left:10px; margin-right:10px; }
+
+/*Top Home Sidebar*/
+#TopHomeSection ul.lang li  > a {border-right:solid 1px #FFF; padding-right: 5px}
+#TopHomeSection  ul.lang  > li:last-child  > a{border-right:none;}
+
+
+
+#TopHomeSection{background-color:#4C4C4E;}
+#TopHomeSection, #TopHomeSection a{color:#FFF; font-size: 14px; }
+#TopHomeSection ul.menu-area{padding-top: 10px}
+#TopHomeSection ul.menu-area > li{margin-right: 0px;}
+#TopHomeSection ul>li a{display: block;}
+#TopHomeSection ul>li {padding-top: 5px; padding-bottom: 5px; margin-right: 5px; float: left;  margin-bottom: 0px; list-style: none; }
+#menu-top-home li > a {border-right: solid 1px #FFF; padding-right: 5px;}
+#TopHomeSection .menu-lg-navigation li.separator{padding-left: 2px; padding-right: 2px;}
+#TopHomeSection .menu-lg-navigation li.separator:last-child{display: none}
+#TopHomeSection ul{padding: 0px; display: table;}
+#TopHomeSection ul li {float: left; margin-bottom: 0px; list-style: none}
+#TopHomeSection >div >div > ul > li {margin-right: 5px;}
+
+
+#TopHomeSection .menu-lg-navigation li {margin-right: 0px;}
+
+#TopHomeSection li.current-page-ancestor>a, #TopHomeSection li.current-post-ancestor>a,#TopHomeSection li.current_page_item>a, #TopHomeSection li>a.current_language, #TopHomeSection li.current-menu-item >a, #TopHomeSection li.current-category-ancestor > a{font-weight: bold}
+
+#TopHomeSection .reseaux-sociaux, #TopHomeSection .search-area li.contact{padding-top: 15px;}
+#TopHomeSection .reseaux-sociaux span.message,
+#TopHomeSection .search-area li.contact > a { color: #b2b3b5; float: left; font-size: 18px; font-style: italic; padding-top:0; padding-bottom:0; padding-left: 10px; padding-right: 10px; height: 100%; border:solid 1px #b2b3b5; margin-right: 10px;}
+#TopHomeSection .search-area li.contact > a{display: block}
+#TopHomeSection .search-area li.contact > a:hover{color:#FFF}
+#TopHomeSection .search-area li.search > a:hover, #TopHomeSection .search-area li.search > a:active, #TopHomeSection .search-area li.search > a:focus{background-color:  inherit; }
+#TopHomeSection .search-area li > a:hover, #TopHomeSection .search-area li li > a:focus,#TopHomeSection .search-area li.search.ouvert, #TopHomeSection .search-area li.search:hover{background-color: #b2b3b5;}
+
+
+
+
+#TopHomeSection .search-area{ text-align: right; display: table;}
+#TopHomeSection .search-area li{margin-left: 15px;}
+.search-box-wrapper { box-sizing: border-box; position: absolute; right: 0;  width: 100%; z-index: 2; background-color: #b2b3b5; padding: 10px;}
+#searchform #s, #searchform #s:focus{font-family: "source sans pro" ;text-align: center; font-size: 20px; border:solid 1px #b2b3b5; -webkit-box-shadow: 4px 9px 5px 0px rgba(50, 50, 50, 0.75);-moz-box-shadow:    4px 9px 5px 0px rgba(50, 50, 50, 0.75);box-shadow: 4px 9px 5px 0px rgba(50, 50, 50, 0.75); padding: 0}
+
+
+
+.ui-coverflow-wrapper {
+    height: 220px;
+    overflow: hidden;
+}
+
+.immo-submit{border: none; background: none}
+
+.breadcrumbs {padding: 0; background: url('../images/ico_breadcrumb.png') left center no-repeat; padding-left: 15px; }
+.breadcrumbs, .breadcrumbs  span > a.link, .breadcrumbs > span {font-family: "source sans pro"; font-style: italic; font-size: 14px; color:#4c4c4e}
+.breadcrumbs img {vertical-align: inherit;}
+
+
+/*Coordonnées*/
+.coordonnees {margin-top: 50px; padding: 35px 10px 10px; position: relative; font-size: 15px; border: solid 1px #50961e}
+.galerie_img {margin-top: 20px; padding: 35px 10px 10px; position: relative; font-size: 15px; border: solid 1px #50961e}
+.coordonnees .lab, .galerie_img .lab {border-radius: 4px 0; color: #fff; font-size: 13px; font-weight: bold; left: -1px; padding: 3px 7px; position: absolute; top: -1px; background-color: #50961e}
+
+.acteur-public .coordonnees, .acteur-public .galerie_img{border: solid 1px #e2690e;}
+.acteur-public .coordonnees .lab, .acteur-public .galerie_img .lab{background-color: #e2690e;}
+
+.entreprise .coordonnees, .entreprise .galerie_img{border: solid 1px #a33088;}
+.entreprise .coordonnees .lab, .entreprise .galerie_img .lab{background-color: #a33088;}
+
+.citoyen .coordonnees, .citoyen .galerie_img{border: solid 1px #009975;}
+.citoyen .coordonnees .lab, .citoyen .galerie_img .lab{background-color: #009975;}
+
+.igretec .coordonnees, .igretec .galerie_img{border: solid 1px #cc012d;}
+.igretec .coordonnees .lab, .igretec .galerie_img .lab{background-color: #cc012d;}
+
+.publication .coordonnees, .publication .galerie_img{border: solid 1px #e72c79;}
+.publication .coordonnees .lab, .publication .galerie_img .lab{background-color: #e72c79;}
+
+.actualites-partenaires .lab{background-color:#3c5a98;}
+.actualites-partenaires .coordonnees, .actualites-partenaires .galerie_img {border: solid 1px #3c5a98;} 
+
+.energie .coordonnees, .energie .galerie_img{border: solid 1px #e72c79;}
+.energie .coordonnees .lab, .energie .galerie_img .lab{background-color: #e72c79;}
+
+
+.type-igretec-immo{margin-top: 20px;}
+/*.immoSingle a {color:#50961e;}*/
+
+/*
+.panel-success{border-color: #50961e;}
+.panel-success > .panel-heading{color:#50961e; border-color: #50961e; background-color: #FFF; }
+*/
+/*
+.immoSingle .panel-fiche {border-color: #50961e;}
+.immoSingle .panel-fiche > .panel-heading{color:#50961e; border-color: #50961e; background-color: #FFF; }
+*/
+.immoSingle  .panel-heading a:hover, .immoSingle  .panel-heading a:focus, .immoSingle  .panel-heading a:active{color: inherit}
+
+.immoSingle .panel-fiche {border-color: #50961e;}
+.immoSingle .panel-fiche > .panel-heading {color: #FFF;background-color: #50961e;}
+.immoSingle .panel-fiche .panel-collapse a{color:#50961e;}
+
+.immoSingle .panel-descriptif {border-color: #1093cd}
+.immoSingle .panel-descriptif > .panel-heading {color: #FFF;background-color: #1093cd}
+.immoSingle .panel-descriptif .panel-collapse a, .immoSingle .panel-descriptif h2{color:#1093cd;}
+
+.immoSingle .panel-localisation {border-color: #e6801d}
+.immoSingle .panel-localisation > .panel-heading {color: #FFF;background-color: #e6801d}
+.immoSingle .panel-localisation .panel-collapse a{color:#e6801d;}
+
+.immoSingle .panel-visite {border-color: #ce1d2d}
+.immoSingle .panel-visite > .panel-heading {color: #FFF;background-color: #ce1d2d}
+.immoSingle .panel-visite .panel-collapse a{color:#ce1d2d;}
+
+.immoSingle .panel-photo {border-color: #6766b6}
+.immoSingle .panel-photo > .panel-heading {color: #FFF;background-color: #6766b6}
+.immoSingle .panel-photo .panel-collapse a{color:#6766b6;}
+
+.immoSingle .panel-coordonnees {border-color: #dd4983}
+.immoSingle .panel-coordonnees > .panel-heading {color: #FFF;background-color: #dd4983}
+.immoSingle .panel-coordonnees .panel-collapse a{color:#dd4983}
+.gallery-zoom{font-size:20px;}
+.flipster .flipto-prev, .flipster .flipto-next {
+    display: block;
+    margin-top: 25px;
+    position: absolute;
+    top: 20%;
+    transition: background-color 300ms ease 0s;
+    z-index: 999;
+	font-size:30px;
+}
+.flipster .flipto-prev {left: 0;}
+.flipster .flipto-next {right: 0;}
+
+.panel-igretec-emploi h2.title-emploi {color:inherit;}
+.panel-igretec-emploi h3 {border-bottom: 1px solid #cc012d; color:#cc012d}
+.panel-igretec-emploi {border-color: #cc012d}
+.panel-igretec-emploi > .panel-heading {color: #FFF;background-color: #cc012d}
+.panel-igretec-emploi > .panel-heading > .panel-title > a{color:#FFF;}
+.panel-igretec-emploi  .panel-heading a:hover, .panel-igretec-emploi  .panel-heading a:focus, .panel-igretec-emploi .panel-heading a:active{color: inherit}
+
+div.wpcf7-validation-errors{border:2px solid #CC012E;}
+p.reference-meta{font-weight:bold; color:#50961e}
+
+@media print {
+ 
+  a[href]:after {
+    content: "";
+  }
+ 
+}
+.voirToutBatiments{font-size:14px;}
+.voirToutBatiments a{ color:#50961e}
+
+.widget_igretecseachimmowidget .immo-submit {
+margin-top:10px;
+    background: none repeat scroll 0 0 #50961e;
+    color: #fff;
+	
+}
+
+.widget_igretecseachimmowidget .immo-submit:hover {
+    font-weight:bold;
+    
+}
+
+span.wpcf7-list-item {
+	display:block
+}
+
+@media (min-width: 992px) and (max-width: 1199px) and (orientation : landscape) {
+  .hidden-md {
+    display: block !important;
+  }
+   .hidden-sm {
+    display: none !important;
+  }
+}
+
+span.igretec {color: #cc012d;}
+span.entreprise {color: #a33088;}
+span.citoyen {color: #009975;}
+span.acteur-public {color: #e2690e;}
+
+span.energie{color:#e72c79;}
+span.region{color:#3c5a98;}
+
+#QuiEtesVousSidebar  .noTitle{
+	margin-top : 55px;
+}
+#related-post h3{
+    margin-top: 0
+}
+
+#related-post{
+    border-top: solid 1px #D8D8D8;
+    border-bottom: solid 1px #D8D8D8;
+    margin-top:40px;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#related-post ul{
+    padding-left: 20px
+}
+
+.btn-metier{
+    border: solid 1px;
+    -webkit-border-radius: 20;
+    -moz-border-radius: 20;
+    border-radius: 20px;
+   
+    /*
+    -webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);
+    */
+    background-color: #FFF;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;    
+    display: block;
+    margin-top: 20px;
+    text-align: center ;
+    opacity: 1;
+    text-transform: uppercase;
+}
+
+.btn-metier:hover{
+    color: #FFF; 
+    opacity: 1;
+    box-shadow: none;
+}
+
+.btn-metier:first-child{
+    margin-top: 35px
+}
+
+.btn-metier:last-child{
+    margin-bottom: 20px;
+}
+
+#bottomRightSidebar{
+    margin-top: 20px;
+}
+
+#chrhuy_application_form .panel-button{
+    margin-top: 20px;
+}
+
+#chrhuy_application_form .row{
+    margin-bottom: 10px;
+}
+
+#chrhuy_application_form{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#ui-datepicker-div {display: none;}
+#chrhuy_application_form .typeahead .active a {color:#FFF;}
+
+
+.grid-custom
+{padding:15px}
+
+.grid-custom .col-sm-6,
+.grid-custom .col-sm-4,
+.grid-custom .col-xs-6,
+.grid-custom .col-xs-12,
+.grid-custom .col-sm-3 {
+	
+	border: solid 1px #FFF;
+    padding:0px;
+}
+
+
+.grid-custom .active-overlay {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.65) 100%) repeat scroll 0 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.grid-custom .thumb-info {
+    bottom: 10px;
+    left: 10px;
+    position: absolute;
+}
+
+
+.grid-custom .thumb-info h2, .grid-custom .overlay h2 {
+    color: #fff;    
+    font-size: 20px;
+    line-height: 22px;
+    margin: 0;
+    padding-right: 40px;    
+	font-weight:bold
+}
+
+.grid-custom .thumb-info  h5, .grid-custom .overlay h5 {
+    color: #fff;
+	font-size: 16px;    
+    margin: 0;
+	font-weight:bold
+}
+
+
+.grid-custom .overlay {
+    background: #cc012d none repeat scroll 0 0;
+    display: none;
+    height: 100%;
+    opacity:0.85;
+    position: absolute;
+    top: 0;
+    width: 100%;
+	padding:10px;
+}
+
+.grid-custom a:hover .overlay{
+	display:block
+}
+
+.grid-custom .overlay p{
+	margin-top:10px;
+	color:#FFF;
+	font-size:15px;
+	font-weight:normal
+}
+
+
+a.more-news {
+    background: #cc012d none repeat scroll 0 0;
+    border-bottom: 2px solid #dbdbdb;
+    color: #fff;
+    display: block;
+    float: left;    
+    font-size: 14px;
+    height: 35px;
+    line-height: 35px;
+    margin-top: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+	padding:0
+}
+
+a.more-news:hover{color:#FFF}
+
+.btn-igretec, div.igretec a.btn-igretec{
+	font-size :18px;
+	background-color: #cc012d;
+	border-color: #cc012d;
+	color:#FFF;
+	text-transform: uppercase;
+}
+
+.btn-igretec:hover, div.igretec a.btn-igretec:hover{
+	background-color: #cc012d;
+	color:#FFF;
+	font-weight:bolder
+}
+.cptch_block{
+	display: inline !important;
+}
+
+form input.cptch_input{
+	height:30px;
+}
+
+.feder{
+	padding-top: 20px;
+	padding-bottom: 0px;
+	padding-left: 50px;
+	padding-right: 30px;
+}
+
+
+
+.carousel .thumbnails li> .fff .caption { 
+    background:#fff !important; 
+    font-size:12px;
+}
+
+.carousel img{
+	width:100%;
+	height: 150px;
+	
+}
+
+.carousel a img.alignnone
+{
+	margin:0;
+}
+
+/* Page Header */
+
+.carousel .carousel-inner{
+	height:auto;
+	
+}
+
+.carousel ul.thumbnails { 
+    margin-bottom: 0px;
+}
+
+
+
+/* Thumbnail Box */
+.carousel .caption h4 {
+    color: #444;
+}
+
+.carousel .caption p {  
+    color: #999;
+}
+
+
+
+/* Carousel Control */
+.carousel .control-box {
+    text-align: right;
+    width: 100%;
+}
+.carousel .carousel-control{
+    background: #666;
+    border: 0px;
+    border-radius: 0px;
+    display: inline-block;
+    font-size: 34px;
+    font-weight: 200;
+    line-height: 18px;
+    opacity: 0.5;
+    padding: 4px 10px 0px;
+    position: static;
+    height: 30px;
+    width: 15px;
+}
+
+/* Mobile Only */
+@media (max-width: 767px) {
+   .carousel .control-box {
+        text-align: center;
+    } 
+}
+@media (max-width: 479px) {
+    .carousel .caption {
+        word-break: break-all;
+    }
+}
+
+
+.carousel li { list-style-type:none;}
+
+
+div#tarteaucitronAlertBig:before{
+    content: ' ' !important;
+}
+
+#tarteaucitronRoot #tarteaucitronAlertBig{
+    background: #CC012D !important;
+}
+
+
+
+#tarteaucitronAlertBig #tarteaucitronCloseAlert, #tarteaucitronAlertBig #tarteaucitronPersonalize, #tarteaucitron #tarteaucitronPrivacyUrl,
+#tarteaucitron #tarteaucitronPrivacyUrlDialog{
+    background:#50961E !important;
+}
+
+#tarteaucitronPrivacyUrlDialog{
+	background:#FFF !important;
+}
+
+#tarteaucitronAlertBig #tarteaucitronCloseAlert{
+    background:#fff !important;
+    font-size: 16px !important;
+    padding: 5px 10px !important;
+    margin-left: 7px !important;
+}
+
+.tarteaucitronLine .tarteaucitronAllow, .tarteaucitronLine .tarteaucitronDeny{
+    opacity: 1 !important;
+}
